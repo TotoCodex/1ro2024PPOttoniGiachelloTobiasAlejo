@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+</head>
+<style>
+  tr[id='fila-read']{
+    cursor:pointer;
+  }
+</style>
+<body>
+  
+    <div id="Formulario" style="display: none;">
+      
+    
+        <h2>
+            Form Datos
+        </h2>
+    <div class="MenuDesplegable">
+        <form>
+            Filtrar Por:
+            <select id = "filter-select">
+                <option id="Todos">Todos</option>
+                <option id="Ciudadanos">Ciudadanos</option>
+                <option id="Extranjeros">Extranjeros</option>
+            </select>
+        </form>
+    </div>
+    <div class="CalcularEdad">
+        <form>
+            Calcular Edad Promedio:
+            <input id="Calcular" readonly="text">
+            <button id="botonCalcular" type="button">Calcular</button>
+        </form>
+    </div>
+    Mostrar Columnas:    
+    <form id="filterForm">
+            
+            <label>
+              <input type="checkbox" name="filterOption" > ID
+            </label>
+            <label>
+              <input type="checkbox" name="filterOption" > Nombre
+            </label>
+            <label>
+              <input type="checkbox" name="filterOption" > Apellido
+            </label>
+            <label>
+                <input type="checkbox" name="filterOption" > Fecha de Nacimiento
+              </label>
+              <label>
+                <input type="checkbox" name="filterOption"> Dni
+              </label>
+              <label>
+                <input type="checkbox" name="filterOption">Pais de Origen
+              </label>
+              
+            
+    </form>
+
+    <table id ="data-Table" border="2">
+      <thead >
+        <tr>
+          <th><button>ID</button></th>
+          <th><button>Nombre</button></th>
+          <th><button>Apellido</button></th>
+          <th><button>Fecha de Nacimiento</button></th>
+          <th><button>DNI</button></th>
+          <th><button>Pais de Origen</button></th>
+        </tr>
+    </thead>
+    <tbody id ="data-output">
+
+    </tbody>
+    </table>
+    <form>
+      <button id="Agregar" type="button">Agregar</button>
+      
+  </form>
+  </div>
+  
+  <div id="Formulario2" style="display: none;">
+    <h2>
+        Formulario ABM
+    </h2>
+
+    <form>
+        Id:<input id="ABMID"readonly>
+    </form>
+    <form>
+        Nombre:<input id="ABMNombre">
+    </form>
+    <form>
+        Apellido:<input id="ABMApellido">
+    </form>
+    <form>
+      Fecha de Nacimiento:<input id="ABMFechadeNacimiento" type="number">
+    </form>
+    <form>
+          Tipo:
+          <select id = "filter-select1">
+            <option id="Vacio">-</option>  
+            <option id="Ciudadano-Select">Ciudadano</option>
+              <option id="Extranjero-Select">Extranjero</option>
+          </select>
+    </form>
+    <div id="AtributosCiudadanos" style="display: none;">
+        <form>
+          DNI:<input id="ABMDNI" type="number">
+      </form>
+      
+    </div>
+    <div id="AtributosExtranjeros" style="display: none;">
+      <form>
+          Pais de Origen:<input id="ABMPaisdeOrigen" >
+      </form>
+      
+    </div>
+    
+    <form>
+        <button id="Aceptar" type="button" style="display: inline;">Aceptar</button><button id="Modificar" type="button" style="display: none;">Modificar</button> <button id="Eliminar" type="button">Eliminar</button><button id="Cancelar"type="button"> Cancelar</button>
+    </form>
+</div>
+</div> 
+ 
+  <script src="Personas.js"></script>
+</body>
+</html>
